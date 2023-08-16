@@ -47,10 +47,13 @@ function enviarCorreo(datos = { Para: '', Logo: '' }) {
       },
       error: function (error) {
         $("#Progress").hide();
-        swal(
-          "Alerta!",
-          "El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo",
-          "warning"
+        Swal.fire(
+          {
+            title: '¡Alerta!',
+            text: 'El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo',
+            icon: 'warning',
+            confirmButtonText: 'Ok'
+          }
         );
       },
     });
