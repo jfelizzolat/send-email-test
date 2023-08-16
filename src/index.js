@@ -41,31 +41,29 @@ function enviarCorreo(datos = { Para: '', Logo: '' }) {
             });
           } else {
             $("#Progress").hide();
-            swal("Mensaje no enviado!", "", "error");
+            Swal.fire(
+              '¡Mensaje no enviado!',
+              '',
+              'error'
+            )
           }
         });
       },
       error: function (error) {
         $("#Progress").hide();
         Swal.fire(
-          {
-            title: '¡Alerta!',
-            text: 'El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo',
-            icon: 'warning',
-            confirmButtonText: 'Ok'
-          }
-        );
+          '¡Alerta!',
+          'El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo',
+          'warning'
+        )
       },
     });
   } else
     Swal.fire(
-      {
-        title: '¡Alerta!',
-        text: 'El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo',
-        icon: 'warning',
-        confirmButtonText: 'Ok'
-      }
-    );
+      '¡Alerta!',
+      'El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo',
+      'warning'
+    )
 }
 
 function validarEmail(valor) {
