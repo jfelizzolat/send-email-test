@@ -49,7 +49,7 @@ function enviarCorreo(datos = { Para: '', Logo: '' }) {
         $("#Progress").hide();
         swal(
           "Alerta!",
-          "El formulario no se diligenció correctamente. Por favor verifique los campos resaltados e intente de nuevo",
+          "El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo",
           "warning"
         );
       },
@@ -58,7 +58,7 @@ function enviarCorreo(datos = { Para: '', Logo: '' }) {
     Swal.fire(
       {
         title: '¡Alerta!',
-        text: 'El formulario no se diligenció correctamente. Por favor verifique los campos resaltados e intente de nuevo',
+        text: 'El formulario no se diligenció correctamente.\nPor favor verifique los campos resaltados e intente de nuevo',
         icon: 'warning',
         confirmButtonText: 'Ok'
       }
